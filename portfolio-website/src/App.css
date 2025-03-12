@@ -1,10 +1,39 @@
 @import "tailwindcss";
 
-.home__full_screen{
-
-    background-color: #011627;
+.home__full_screen {
+  background-color: #011627;
 }
-.about__me{
-    background-color: #001e35;
+.about__me {
+  background-color: #001e35;
 }
 
+#contactButton {
+  position: relative;
+}
+.contact-route {
+  width: 0%;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: background-color 0.5s ease, width 1s ease;
+}
+#contactButton:hover .contact-route {
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 6px;
+}
+.contact-text {
+    position: relative;
+    z-index: 10;
+    transition: color 0.3s ease;
+  }
+
+
+#contactButton:hover .contact-text {
+    color: white;
+  }

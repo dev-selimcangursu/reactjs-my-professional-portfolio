@@ -12,7 +12,7 @@ function Header() {
         </a>
       </div>
       <div className="header__menu">
-        <ul className="flex row gap-5">
+        <ul className="hidden  md:flex row gap-5">
           <li className="text-[14px] font-medium tracking-[0.08rem]">
             <a className="link" href="">
               <span className="link-route"></span>

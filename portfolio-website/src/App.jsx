@@ -1,5 +1,5 @@
 import "./App.css";
-import Header from "./components/Header";
+import Header from "./components/Header/Header";
 import Typewriter from "typewriter-effect/dist/core";
 import { useEffect, useRef } from "react";
 import Button from "./components/Button";
@@ -36,8 +36,12 @@ function App() {
               dijital dünyada öne çıkmasını sağlıyorum. Estetik ve performansı
               bir araya getirerek etkileyici web deneyimleri sunuyorum.
             </p>
-            <Button className="p-3 border-0 w-40 text-black cursor-pointer rounded-md mt-4 text-[15px] shadow-md font-semibold bg-white">
-              <span>İletişime Geç</span>
+            <Button
+              id="contactButton"
+              className="p-3 border-0 w-40 text-black cursor-pointer rounded-md mt-4 text-[15px] shadow-md font-semibold bg-white relative overflow-hidden"
+            >
+              <span className="contact-route"></span>
+              <span className="contact-text">İletişime Geç</span>
             </Button>
           </div>
           {/**  Section 1 Sağ Taraf:Başlangıç **/}
@@ -49,9 +53,9 @@ function App() {
             />
             {/**  Section 1 Sağ Taraf Sosyal Medya İkonları:Başlangıç **/}
             <div className="w-full flex row justify-center items-center gap-2 mt-5 md:flex-col md:justify-end md:items-end">
-              <IoLogoInstagram size={22} />
-              <IoLogoGithub size={22} />
-              <IoLogoLinkedin size={22} />
+              <IoLogoInstagram className="cursor-pointer" size={22} />
+              <IoLogoGithub className="cursor-pointer" size={22} />
+              <IoLogoLinkedin className="cursor-pointer" size={22} />
             </div>
           </div>
         </div>
