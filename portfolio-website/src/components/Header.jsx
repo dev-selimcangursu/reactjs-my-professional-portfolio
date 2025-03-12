@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./Header.css"
 function Header() {
   return (
     <div
@@ -7,29 +7,47 @@ function Header() {
       className="w-full header flex row justify-between items-center p-10 text-white"
     >
       <div className="header__logo">
-        <a className="text-[20px] font-large tracking-[0.08rem]" href="">
+        <a className="text-[20px] font-medium tracking-[0.08rem]" href="">
           SELİMCAN GÜRSU
         </a>
       </div>
       <div className="header__menu">
         <ul className="flex row gap-5">
           <li className="text-[14px] font-medium tracking-[0.08rem]">
-            <a href="">ANASAYFA</a>
+            <a className="link" href="">
+              <span className="link-route"></span>
+              <span className="link-name">ANASAYFA</span>
+            </a>
           </li>
           <li className="text-[14px] font-medium tracking-[0.08rem]">
-            <a href="">HAKKIMDA</a>
+            <a className="link" href="">
+              <span className="link-route"></span>
+              <span className="link-name">HAKKIMDA</span>
+            </a>
           </li>
           <li className="text-[14px] font-medium tracking-[0.08rem]">
-            <a href="">SERVİSLER</a>
+            <a className="link" href="">
+              <span className="link-route"></span>
+              <span className="link-name">SERVİSLER</span>
+            </a>
           </li>
           <li className="text-[14px] font-medium tracking-[0.08rem]">
-            <a href="">PORTFOLIO</a>
+            <a className="link" href="">
+              <span className="link-route"></span>
+              <span className="link-name">PORTFOLIO</span>
+            </a>
           </li>
           <li className="text-[14px] font-medium tracking-[0.08rem]">
-            <a href="">BLOG</a>
+            <a className="link" href="">
+              <span className="link-route"></span>
+              <span className="link-name">BLOG</span>
+            </a>
           </li>
           <li className="text-[14px] font-medium tracking-[0.08rem]">
-            <a href="">İLETİŞİM</a>
+            <a className="link" href="">
+              <span className="link-route"></span>
+              <span className="link-name">İLETİŞİM</span>
+            </a>
           </li>
         </ul>
       </div>
