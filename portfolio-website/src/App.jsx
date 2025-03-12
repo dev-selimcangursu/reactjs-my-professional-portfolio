@@ -46,18 +46,19 @@ function App() {
           </div>
           {/**  Section 1 Sağ Taraf:Başlangıç **/}
           <div className="w-full h-full home__full_screen__main__right grid grid-cols-1 md:grid-cols-2 justify-between items-center">
-            <img
-              style={{ height: "400px", width: "900px" }}
-              src={userİmage}
-              alt="my_photo"
-            />
-            {/**  Section 1 Sağ Taraf Sosyal Medya İkonları:Başlangıç **/}
-            <div className="w-full flex row justify-center items-center gap-2 mt-5 md:flex-col md:justify-end md:items-end">
-              <IoLogoInstagram className="cursor-pointer" size={22} />
-              <IoLogoGithub className="cursor-pointer" size={22} />
-              <IoLogoLinkedin className="cursor-pointer" size={22} />
-            </div>
-          </div>
+  <img
+    className="w-full h-auto max-w-lg md:max-w-xl lg:max-w-2xl"
+    src={userİmage}
+    alt="my_photo"
+  />
+  {/**  Section 1 Sağ Taraf Sosyal Medya İkonları:Başlangıç **/}
+  <div className="w-full flex row justify-center items-center gap-2 mt-5 md:flex-col md:justify-end md:items-end">
+    <IoLogoInstagram className="cursor-pointer" size={22} />
+    <IoLogoGithub className="cursor-pointer" size={22} />
+    <IoLogoLinkedin className="cursor-pointer" size={22} />
+  </div>
+</div>
+
         </div>
       </section>
       <section
