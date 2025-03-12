@@ -1,5 +1,7 @@
 import React from "react";
 import "./Header.css"
+import { RxHamburgerMenu } from "react-icons/rx";
+
 function Header() {
   return (
     <div
@@ -50,6 +52,7 @@ function Header() {
             </a>
           </li>
         </ul>
+         <a className="block md:hidden text-3xl"><RxHamburgerMenu /></a>
       </div>
     </div>
   );
