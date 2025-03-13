@@ -14,7 +14,6 @@ function Header() {
 
   }
   console.log(statusMobileShow)
-
   return (
     <>
       <div
