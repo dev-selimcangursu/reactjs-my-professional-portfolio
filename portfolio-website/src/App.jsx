@@ -3,16 +3,20 @@ import Header from "./components/Header/Header";
 import Typewriter from "typewriter-effect/dist/core";
 import { useEffect, useRef } from "react";
 import Button from "./components/Button";
-import userİmage from "./assets/cheerful-guy-enjoying-outdoor-coffee-break-Photoroom.png";
 import { IoLogoInstagram, IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
 import Box from "./components/Box";
-
+import { useSelector } from "react-redux";
+import Card from "./components/Card";
 function App() {
+  const about = useSelector((state) => state.about.value);
+  const services = useSelector((state) => state.services.value);
+
+
   // TypeWriter Kütüphanesi
   const typewriterRef = useRef(null);
   useEffect(() => {
     new Typewriter(typewriterRef.current, {
-      strings: ["Full Stack Web Developer"],
+      strings: about[0].title,
       autoStart: true,
       loop: true,
     });
@@ -26,7 +30,7 @@ function App() {
           {/**  Section 1 Sol Taraf:Başlangıç **/}
           <div className="w-full h-full home__full_screen__main__left">
             <p className="text-[20px] font-[600px]">Merhaba, Ben</p>
-            <h1 className="text-[60px] font-bold">Selimcan Gürsu</h1>
+            <h1 className="text-[60px] font-bold">{about[0].fullname}</h1>
             <h3
               className="text-red-600 text-[28px] font-bold"
               ref={typewriterRef}
@@ -49,91 +53,138 @@ function App() {
           <div className="w-full h-full home__full_screen__main__right grid grid-cols-1 md:grid-cols-2 justify-between items-center">
             <img
               className="w-full h-auto max-w-lg md:max-w-xl lg:max-w-2xl"
-              src={userİmage}
+              src=""
               alt="my_photo"
             />
             {/**  Section 1 Sağ Taraf Sosyal Medya İkonları:Başlangıç **/}
             <div className="w-full flex row justify-center items-center gap-2 mt-5 md:flex-col md:justify-end md:items-end">
-              <IoLogoInstagram className="cursor-pointer" size={22} />
-              <IoLogoGithub className="cursor-pointer" size={22} />
-              <IoLogoLinkedin className="cursor-pointer" size={22} />
+              <a href={about[0].instagram}>
+                {" "}
+                <IoLogoInstagram className="cursor-pointer" size={22} />
+              </a>
+              <a href={about[0].github}>
+                {" "}
+                <IoLogoGithub className="cursor-pointer" size={22} />
+              </a>
+              <a href={about[0].linkedin}>
+                {" "}
+                <IoLogoLinkedin className="cursor-pointer" size={22} />
+              </a>
             </div>
           </div>
         </div>
       </section>
       <section
-        className="about__me w-full h-auto text-white p-18"
+        className="about__me w-full h-auto text-white py-20"
         id="about__me"
       >
-        <div className="about__me__wrapper grid grid-cols-1 md:grid-cols-2 justify-between items-center">
-          {/**  Section 2 Sol Taraf:Başlangıç **/}
-          <div className="about__me__left">
-            <img src="" alt="my_photo" />
-          </div>
-          {/**  Section 2 Sağ Taraf:Başlangıç **/}
-          <div className="about__me__right grid grid-rows-4  items-center">
-            <div className="about__me__text mt-2 h-auto">
-              <h3 className="text-[18px] mb-2 font-bold">Hakkımda</h3>
-              <p className="text-[15px] text-gray-400">
-                Ben bir web geliştiricisiyim ve kullanıcı dostu, ölçeklenebilir
-                web uygulamaları oluşturmak konusunda tutkuluyum. HTML, CSS,
-                JavaScript ve modern framework'lerde (React, Vue.js) deneyime
-                sahibim. 
-              </p>
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            {/** Sol Taraf - Profil Fotoğrafı **/}
+            <div className="about-me-left flex justify-center">
+              <img
+                src=""
+                alt="Profil Fotoğrafı"
+                className="rounded-lg shadow-lg w-64 h-64 object-cover"
+              />
             </div>
-            <div className="about__me__text h-auto">
-              <h3 className="text-[18px] mb-7 font-bold">Tasarım Araçları</h3>
-              <div className="w-full h-auto grid grid-cols-1 md:flex row gap-3">
-                <Box className="border-1 p-2 text-[12px] text-gray-400 rounded-full hover:border-gray-100 hover:text-gray-100">
-                  Canva
-                </Box>
-                <Box className="border-1 p-2 text-[12px] text-gray-400 rounded-full hover:border-gray-100 hover:text-gray-100">
-                  Figma
-                </Box>
-                <Box className="border-1 p-2 text-[12px] text-gray-400 rounded-full  hover:border-gray-100 hover:text-gray-100">
-                  Photoshop
-                </Box>
-                <Box className="border-1 p-2 text-[12px] text-gray-400 rounded-full  hover:border-gray-100 hover:text-gray-100">
-                  Illustrator
-                </Box>
+
+            {/** Sağ Taraf - İçerik **/}
+            <div className="about-me-right space-y-10">
+              {/** Hakkımda Açıklaması **/}
+              <div>
+                <h3 className="text-xl font-semibold text-gray-200 mb-2">
+                  🚀 Hakkımda
+                </h3>
+                <p className="text-md text-gray-400 leading-relaxed">
+                  {about[0].description}
+                </p>
               </div>
-            </div>
-            <div className="about__me__text">
-              <h3 className="text-[18px] mb-7 font-bold">
-                Teknolojiler ve Beceriler
-              </h3>
-              <div className="w-full grid grid-cols-1 md:flex row gap-3">
-                <Box className="border-1 p-2 text-[12px] text-gray-400 rounded-full hover:border-gray-100 hover:text-gray-100">
-                  Html
-                </Box>
-                <Box className="border-1 p-2 text-[12px] text-gray-400 rounded-full hover:border-gray-100 hover:text-gray-100">
-                  Css
-                </Box>
-                <Box className="border-1 p-2 text-[12px] text-gray-400 rounded-full  hover:border-gray-100 hover:text-gray-100">
-                  Php
-                </Box>
-                <Box className="border-1 p-2 text-[12px] text-gray-400 rounded-full  hover:border-gray-100 hover:text-gray-100">
-                  Laravel
-                </Box>
-                <Box className="border-1 p-2 text-[12px] text-gray-400 rounded-full  hover:border-gray-100 hover:text-gray-100">
-                  Javascript
-                </Box>
-                <Box className="border-1 p-2 text-[12px] text-gray-400 rounded-full  hover:border-gray-100 hover:text-gray-100">
-                  React.Js
-                </Box>
-                <Box className="border-1 p-2 text-[12px] text-gray-400 rounded-full  hover:border-gray-100 hover:text-gray-100">
-                  Node.Js
-                </Box>
+              {/** Tasarım Araçları **/}
+              <div>
+                <h3 className="text-xl font-semibold text-gray-200 mb-2">
+                  🚀 Tasarım Araçları
+                </h3>
+                <div className="flex flex-wrap gap-3">
+                  {["Canva", "Figma", "Photoshop", "Illustrator"].map(
+                    (tool, index) => (
+                      <span
+                        key={index}
+                        className="px-3 py-1 border border-gray-500 text-sm text-gray-400 rounded-full hover:border-gray-100 hover:text-gray-100 transition"
+                      >
+                        {tool}
+                      </span>
+                    )
+                  )}
+                </div>
               </div>
-            </div>
-            <div className="about__me__text">
-              <h3 className="text-[18px] mb-2 font-bold">Çalışma Prensibim</h3>
-              <p className="text-[15px] text-gray-400">
-                Projelerde temiz ve optimize kod yazmaya özen gösteririm.
-                Kullanıcı deneyimini ön planda tutarak modern, ölçeklenebilir ve
-                sürdürülebilir web uygulamaları geliştiririm. Ekip çalışmasına
-                ve sürekli öğrenmeye önem veririm.
-              </p>
+              {/** Teknolojiler ve Beceriler **/}
+              <div>
+                <h3 className="text-xl font-semibold text-gray-200 mb-2">
+                  🚀 Teknolojiler & Beceriler
+                </h3>
+                <div className="flex flex-wrap gap-3">
+                  {[
+                    "HTML",
+                    "CSS",
+                    "PHP",
+                    "Laravel",
+                    "JavaScript",
+                    "React.js",
+                    "Node.js",
+                  ].map((tech, index) => (
+                    <span
+                      key={index}
+                      className="px-3 py-1 border border-gray-500 text-sm text-gray-400 rounded-full hover:border-gray-100 hover:text-gray-100 transition"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              {/** Öne Çıkan Yetkinlikler **/}
+              <div className="rounded-lg shadow-lg">
+                <h3 className="text-xl font-semibold text-gray-200 mb-4 flex items-center">
+                  🚀 Öne Çıkan Yetkinliklerim:
+                </h3>
+                <ul className="space-y-3">
+                  {[
+                    {
+                      text: "Takım Çalışmasına Uyum",
+                      desc: "Ekip içinde etkili iletişim kurarak projeleri başarıyla yönetebilirim.",
+                      icon: "🤝",
+                    },
+                    {
+                      text: "Problem Çözme Yeteneği",
+                      desc: "Karşılaştığım teknik zorluklara yaratıcı çözümler bulurum.",
+                      icon: "🛠️",
+                    },
+                    {
+                      text: "Araştırma ve Geliştirme",
+                      desc: "Yeni teknolojileri yakından takip eder, projelerime entegre ederim.",
+                      icon: "🔍",
+                    },
+                    {
+                      text: "Detay Odaklı Çalışma",
+                      desc: "Kullanıcı deneyimi ve performans optimizasyonuna önem veririm.",
+                      icon: "🎯",
+                    },
+                  ].map((item, index) => (
+                    <li
+                      key={index}
+                      className="flex items-start gap-3 p-3 bg-gray-700 rounded-md hover:bg-gray-600 transition"
+                    >
+                      <span className="text-lg">{item.icon}</span>
+                      <div>
+                        <p className="text-md font-medium text-gray-200">
+                          {item.text}
+                        </p>
+                        <p className="text-sm text-gray-400">{item.desc}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -144,8 +195,26 @@ function App() {
       >
         <div className="w-full my__services__title">
           <h3 className="text-center text-[40px] font-medium tracking-[3px]">
-            SERVİSLERİM
+            HİZMETLERİM
           </h3>
+          <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-5 mt-10">
+            {services.map((service, index) => {
+              return <Card key={index} services={service} />;
+            })}
+          </div>
+        </div>
+      </section>
+      <section
+        id="my__experience"
+        className="my__experience w-full h-auto text-white p-18"
+      >
+        <div className="w-full my__services__title">
+          <h3 className="text-center text-[40px] font-medium tracking-[3px]">
+            DENEYİMİM
+          </h3>
+          <div className="w-full grid grid-cols-1 md:grid-cols-1 gap-5 mt-10">
+            
+          </div>
         </div>
       </section>
     </>
