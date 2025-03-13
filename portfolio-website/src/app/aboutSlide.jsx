@@ -15,6 +15,7 @@ const initialState = {
       github:"https://github.com/dev-selimcangursu",
       linkedin:"https://www.linkedin.com/in/selimcan-g%C3%BCrsu-aa4794339?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       instagram:"https://www.instagram.com/selimcangursu3?igsh=MTlybWhoYjQ4Y2xkNQ==",
+      location:"İstanbul,Türkiye"
     },
   ],
 };

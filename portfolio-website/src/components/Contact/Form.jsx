@@ -2,8 +2,13 @@ import React from "react";
 import Button from "../Button";
 function Form() {
   return (
-    <div className="w-full grid grid-cols-1 p-5">
-      <h3 className="font-semibold text-[18px]">İletişime Geçin</h3>
+    <div
+      className="w-full grid grid-cols-1 p-5 rounded-xl"
+      style={{ backgroundColor: "#011627" }}
+    >
+      <h3 className="font-semibold border-b pb-2 text-[18px]">
+        İletişime Geçin
+      </h3>
       <form className="grid grid-cols-1 mt-5">
         <div className="w-full grid grid-cols-1 md:grid-cols-2  gap-5">
           <input
