@@ -66,22 +66,24 @@ function App() {
         id="about__me"
       >
         <div className="about__me__wrapper grid grid-cols-1 md:grid-cols-2 justify-between items-center">
+          {/**  Section 2 Sol Taraf:Başlangıç **/}
           <div className="about__me__left">
             <img src="" alt="my_photo" />
           </div>
-          <div className="about__me__right grid grid-rows-4 justify-between items-center">
-            <div className="about__me__text mt-4 h-auto">
+          {/**  Section 2 Sağ Taraf:Başlangıç **/}
+          <div className="about__me__right grid grid-rows-4  items-center">
+            <div className="about__me__text mt-2 h-auto">
               <h3 className="text-[18px] mb-2 font-bold">Hakkımda</h3>
               <p className="text-[15px] text-gray-400">
                 Ben bir web geliştiricisiyim ve kullanıcı dostu, ölçeklenebilir
                 web uygulamaları oluşturmak konusunda tutkuluyum. HTML, CSS,
                 JavaScript ve modern framework'lerde (React, Vue.js) deneyime
-                sahibim.
+                sahibim. 
               </p>
             </div>
-            <div className="about__me__text mt-4 h-auto">
+            <div className="about__me__text h-auto">
               <h3 className="text-[18px] mb-7 font-bold">Tasarım Araçları</h3>
-              <div className="w-full grid grid-cols-1 md:flex row gap-3">
+              <div className="w-full h-auto grid grid-cols-1 md:flex row gap-3">
                 <Box className="border-1 p-2 text-[12px] text-gray-400 rounded-full hover:border-gray-100 hover:text-gray-100">
                   Canva
                 </Box>
@@ -96,7 +98,7 @@ function App() {
                 </Box>
               </div>
             </div>
-            <div className="about__me__text mt-4">
+            <div className="about__me__text">
               <h3 className="text-[18px] mb-7 font-bold">
                 Teknolojiler ve Beceriler
               </h3>
@@ -124,7 +126,7 @@ function App() {
                 </Box>
               </div>
             </div>
-            <div className="about__me__text mt-4">
+            <div className="about__me__text">
               <h3 className="text-[18px] mb-2 font-bold">Çalışma Prensibim</h3>
               <p className="text-[15px] text-gray-400">
                 Projelerde temiz ve optimize kod yazmaya özen gösteririm.
@@ -134,6 +136,16 @@ function App() {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+      <section
+        id="my__services"
+        className="my__services w-full h-auto text-white p-18"
+      >
+        <div className="w-full my__services__title">
+          <h3 className="text-center text-[40px] font-medium tracking-[3px]">
+            SERVİSLERİM
+          </h3>
         </div>
       </section>
     </>

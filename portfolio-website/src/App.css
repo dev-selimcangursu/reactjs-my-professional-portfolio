@@ -6,7 +6,9 @@
 .about__me {
   background-color: #001e35;
 }
-
+.my__services{
+  background-color: #011627; 
+}
 #contactButton {
   position: relative;
 }
@@ -35,19 +37,4 @@
 
 #contactButton:hover .contact-text {
   color: white;
-}
-/* Mobil cihazlar (600px ve altı) */
-@media (max-width: 600px) {
-}
-
-/* Tablet cihazlar (601px - 1024px arası) */
-@media (min-width: 601px) and (max-width: 1024px) {
-}
-
-/* Laptop ve küçük masaüstü ekranlar (1025px - 1440px arası) */
-@media (min-width: 1025px) and (max-width: 1440px) {
-}
-
-/* Masaüstü ekranlar (1441px ve üzeri) */
-@media (min-width: 1441px) {
 }
