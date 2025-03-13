@@ -4,13 +4,13 @@ import Typewriter from "typewriter-effect/dist/core";
 import { useEffect, useRef } from "react";
 import Button from "./components/Button";
 import { IoLogoInstagram, IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
-import Box from "./components/Box";
 import { useSelector } from "react-redux";
 import PortfolioList from "./components/Portfolio/PortfolioList";
 import Contact from "./components/Contact/Contact";
 import Footer from './components/Footer/Footer'
 import ExperienceList from "./components/Experience/ExperienceList";
 import ServiceList from "./components/Services/ServiceList";
+import About from "./components/About/About";
 
 
 function App() {
@@ -29,10 +29,7 @@ function App() {
 
   return (
     <>
-      <section
-        id="home__full_screen"
-        className="home__full_screen w-full h-auto text-white"
-      >
+      <section id="home__full_screen" className="home__full_screen w-full h-auto text-white">
         <Header />
         <div className="home__full__screen__main w-full grid grid-cols-1 md:grid-cols-2 justify-between items-center p-18 gap-30 text-white">
           {/**  Section 1 Sol Taraf:Başlangıç **/}
@@ -82,121 +79,8 @@ function App() {
           </div>
         </div>
       </section>
-      <section
-        className="about__me w-full h-auto text-white py-20"
-        id="about__me"
-      >
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            {/** Sol Taraf - Profil Fotoğrafı **/}
-            <div className="about-me-left flex justify-center">
-              <img
-                src=""
-                alt="Profil Fotoğrafı"
-                className="rounded-lg shadow-lg w-64 h-64 object-cover"
-              />
-            </div>
 
-            {/** Sağ Taraf - İçerik **/}
-            <div className="about-me-right space-y-10">
-              {/** Hakkımda Açıklaması **/}
-              <div>
-                <h3 className="text-xl font-semibold text-gray-200 mb-2">
-                  🚀 Hakkımda
-                </h3>
-                <p className="text-md text-gray-400 leading-relaxed">
-                  {about[0].description}
-                </p>
-              </div>
-              {/** Tasarım Araçları **/}
-              <div>
-                <h3 className="text-xl font-semibold text-gray-200 mb-2">
-                  🚀 Tasarım Araçları
-                </h3>
-                <div className="flex flex-wrap gap-3">
-                  {["Canva", "Figma", "Photoshop", "Illustrator"].map(
-                    (tool, index) => (
-                      <span
-                        key={index}
-                        className="px-3 py-1 border border-gray-500 text-sm text-gray-400 rounded-full hover:border-gray-100 hover:text-gray-100 transition"
-                      >
-                        {tool}
-                      </span>
-                    )
-                  )}
-                </div>
-              </div>
-              {/** Teknolojiler ve Beceriler **/}
-              <div>
-                <h3 className="text-xl font-semibold text-gray-200 mb-2">
-                  🚀 Teknolojiler & Beceriler
-                </h3>
-                <div className="flex flex-wrap gap-3">
-                  {[
-                    "HTML",
-                    "CSS",
-                    "PHP",
-                    "Laravel",
-                    "JavaScript",
-                    "React.js",
-                    "Node.js",
-                  ].map((tech, index) => (
-                    <span
-                      key={index}
-                      className="px-3 py-1 border border-gray-500 text-sm text-gray-400 rounded-full hover:border-gray-100 hover:text-gray-100 transition"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              {/** Öne Çıkan Yetkinlikler **/}
-              <div className="rounded-lg shadow-lg">
-                <h3 className="text-xl font-semibold text-gray-200 mb-4 flex items-center">
-                  🚀 Öne Çıkan Yetkinliklerim:
-                </h3>
-                <ul className="space-y-3">
-                  {[
-                    {
-                      text: "Takım Çalışmasına Uyum",
-                      desc: "Ekip içinde etkili iletişim kurarak projeleri başarıyla yönetebilirim.",
-                      icon: "🤝",
-                    },
-                    {
-                      text: "Problem Çözme Yeteneği",
-                      desc: "Karşılaştığım teknik zorluklara yaratıcı çözümler bulurum.",
-                      icon: "🛠️",
-                    },
-                    {
-                      text: "Araştırma ve Geliştirme",
-                      desc: "Yeni teknolojileri yakından takip eder, projelerime entegre ederim.",
-                      icon: "🔍",
-                    },
-                    {
-                      text: "Detay Odaklı Çalışma",
-                      desc: "Kullanıcı deneyimi ve performans optimizasyonuna önem veririm.",
-                      icon: "🎯",
-                    },
-                  ].map((item, index) => (
-                    <li
-                      key={index}
-                      className="flex items-start gap-3 p-3 bg-gray-700 rounded-md hover:bg-gray-600 transition"
-                    >
-                      <span className="text-lg">{item.icon}</span>
-                      <div>
-                        <p className="text-md font-medium text-gray-200">
-                          {item.text}
-                        </p>
-                        <p className="text-sm text-gray-400">{item.desc}</p>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <About/>
       <ServiceList/>
       <ExperienceList/>
       <PortfolioList />
