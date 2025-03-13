@@ -8,6 +8,9 @@ import Box from "./components/Box";
 import { useSelector } from "react-redux";
 import WorkGallery from './components/WorkGallery'
 import Card from "./components/Card";
+import PortfolioList from "./components/Portfolio/PortfolioList";
+
+
 function App() {
   const about = useSelector((state) => state.about.value);
   const services = useSelector((state) => state.services.value);
@@ -211,7 +214,7 @@ function App() {
       >
         <div className="w-full my__services__title">
           <h3 className="text-center text-[40px] font-medium tracking-[3px]">
-            DENEYİMİM
+            DENEYİMLERİM
           </h3>
           <div className="w-full grid grid-cols-1 md:grid-cols-1 gap-5 mt-10">
             {experience.map((experience, index) => {
@@ -220,6 +223,7 @@ function App() {
           </div>
         </div>
       </section>
+      <PortfolioList/>
     </>
   );
 }

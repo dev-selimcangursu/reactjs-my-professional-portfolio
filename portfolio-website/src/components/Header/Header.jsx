@@ -55,12 +55,6 @@ function Header() {
             <li className="text-[14px] font-medium tracking-[0.08rem]">
               <a className="link" href="">
                 <span className="link-route"></span>
-                <span className="link-name">BLOG</span>
-              </a>
-            </li>
-            <li className="text-[14px] font-medium tracking-[0.08rem]">
-              <a className="link" href="">
-                <span className="link-route"></span>
                 <span className="link-name">İLETİŞİM</span>
               </a>
             </li>
