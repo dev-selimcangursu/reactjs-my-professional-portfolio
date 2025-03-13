@@ -6,11 +6,12 @@ import Button from "./components/Button";
 import { IoLogoInstagram, IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
 import Box from "./components/Box";
 import { useSelector } from "react-redux";
+import WorkGallery from './components/WorkGallery'
 import Card from "./components/Card";
 function App() {
   const about = useSelector((state) => state.about.value);
   const services = useSelector((state) => state.services.value);
-
+  const experience = useSelector((state) => state.experience.value);
 
   // TypeWriter Kütüphanesi
   const typewriterRef = useRef(null);
@@ -213,7 +214,9 @@ function App() {
             DENEYİMİM
           </h3>
           <div className="w-full grid grid-cols-1 md:grid-cols-1 gap-5 mt-10">
-            
+            {experience.map((experience, index) => {
+              return <WorkGallery key={index} experience={experience} />;
+            })}
           </div>
         </div>
       </section>
