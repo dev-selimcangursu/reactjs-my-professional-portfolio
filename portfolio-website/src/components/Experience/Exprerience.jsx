@@ -1,7 +1,7 @@
 import React from "react";
 import { FaLocationDot, FaBusinessTime } from "react-icons/fa6";
 
-function WorkGallery(props) {
+function Exprerience(props) {
   return (
     <div
       style={{ backgroundColor: "#011627" }}
@@ -28,4 +28,4 @@ function WorkGallery(props) {
   );
 }
 
-export default WorkGallery;
+export default Exprerience;

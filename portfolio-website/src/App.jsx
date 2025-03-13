@@ -6,15 +6,16 @@ import Button from "./components/Button";
 import { IoLogoInstagram, IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
 import Box from "./components/Box";
 import { useSelector } from "react-redux";
-import WorkGallery from "./components/WorkGallery";
-import Card from "./components/Card";
 import PortfolioList from "./components/Portfolio/PortfolioList";
 import Contact from "./components/Contact/Contact";
 import Footer from './components/Footer/Footer'
+import ExperienceList from "./components/Experience/ExperienceList";
+import ServiceList from "./components/Services/ServiceList";
+
+
 function App() {
+
   const about = useSelector((state) => state.about.value);
-  const services = useSelector((state) => state.services.value);
-  const experience = useSelector((state) => state.experience.value);
 
   // TypeWriter Kütüphanesi
   const typewriterRef = useRef(null);
@@ -196,36 +197,8 @@ function App() {
           </div>
         </div>
       </section>
-      <section
-        id="my__services"
-        className="my__services w-full h-auto text-white p-18"
-      >
-        <div className="w-full my__services__title">
-          <h3 className="text-center text-[40px] font-medium tracking-[3px]">
-            HİZMETLERİM
-          </h3>
-          <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-5 mt-10">
-            {services.map((service, index) => {
-              return <Card key={index} services={service} />;
-            })}
-          </div>
-        </div>
-      </section>
-      <section
-        id="my__experience"
-        className="my__experience w-full h-auto text-white p-18"
-      >
-        <div className="w-full my__services__title">
-          <h3 className="text-center text-[40px] font-medium tracking-[3px]">
-            DENEYİMLERİM
-          </h3>
-          <div className="w-full grid grid-cols-1 md:grid-cols-1 gap-5 mt-10">
-            {experience.map((experience, index) => {
-              return <WorkGallery key={index} experience={experience} />;
-            })}
-          </div>
-        </div>
-      </section>
+      <ServiceList/>
+      <ExperienceList/>
       <PortfolioList />
       <Contact />
       <Footer/>

@@ -1,8 +1,7 @@
 import React from "react";
 import { useState } from "react";
-function Card(props) {
+function Service(props) {
   const [submain, setSubmain] = useState(props.services.main);
-  console.log(submain);
   return (
     <div
       style={{ backgroundColor: "#001e35" }}
@@ -25,4 +24,4 @@ function Card(props) {
   );
 }
 
-export default Card;
+export default Service;
