@@ -41,19 +41,19 @@ function Header() {
               </a>
             </li>
             <li className="text-[14px] font-medium tracking-[0.08rem]">
-              <a className="link" href="">
+              <a className="link" href="#my__services">
                 <span className="link-route"></span>
                 <span className="link-name">SERVİSLER</span>
               </a>
             </li>
             <li className="text-[14px] font-medium tracking-[0.08rem]">
-              <a className="link" href="">
+              <a className="link" href="#my__portfolio">
                 <span className="link-route"></span>
                 <span className="link-name">PORTFOLIO</span>
               </a>
             </li>
             <li className="text-[14px] font-medium tracking-[0.08rem]">
-              <a className="link" href="">
+              <a className="link" href="#contact">
                 <span className="link-route"></span>
                 <span className="link-name">İLETİŞİM</span>
               </a>
