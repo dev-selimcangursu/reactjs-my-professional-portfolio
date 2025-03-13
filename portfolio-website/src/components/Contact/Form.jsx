@@ -6,7 +6,7 @@ function Form() {
       className="w-full grid grid-cols-1 p-5 rounded-xl"
       style={{ backgroundColor: "#011627" }}
     >
-      <h3 className="font-semibold border-b pb-2 text-[18px]">
+      <h3 className="text-xl font-semibold mb-4 border-b pb-2">
         İletişime Geçin
       </h3>
       <form className="grid grid-cols-1 mt-5">

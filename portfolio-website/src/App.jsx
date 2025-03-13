@@ -6,12 +6,11 @@ import Button from "./components/Button";
 import { IoLogoInstagram, IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
 import Box from "./components/Box";
 import { useSelector } from "react-redux";
-import WorkGallery from './components/WorkGallery'
+import WorkGallery from "./components/WorkGallery";
 import Card from "./components/Card";
 import PortfolioList from "./components/Portfolio/PortfolioList";
 import Contact from "./components/Contact/Contact";
-
-
+import Footer from './components/Footer/Footer'
 function App() {
   const about = useSelector((state) => state.about.value);
   const services = useSelector((state) => state.services.value);
@@ -29,7 +28,10 @@ function App() {
 
   return (
     <>
-      <section id="home__full_screen" className="home__full_screen w-full h-auto text-white">
+      <section
+        id="home__full_screen"
+        className="home__full_screen w-full h-auto text-white"
+      >
         <Header />
         <div className="home__full__screen__main w-full grid grid-cols-1 md:grid-cols-2 justify-between items-center p-18 gap-30 text-white">
           {/**  Section 1 Sol Taraf:Başlangıç **/}
@@ -224,8 +226,9 @@ function App() {
           </div>
         </div>
       </section>
-      <PortfolioList/>
-      <Contact/>
+      <PortfolioList />
+      <Contact />
+      <Footer/>
     </>
   );
 }
