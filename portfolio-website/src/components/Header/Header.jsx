@@ -29,13 +29,13 @@ function Header() {
         <div className="header__menu">
           <ul className="hidden  md:flex row gap-5">
             <li className="text-[14px] font-medium tracking-[0.08rem]">
-              <a className="link" href="">
+              <a className="link" href="#home__full_screen">
                 <span className="link-route"></span>
                 <span className="link-name">ANASAYFA</span>
               </a>
             </li>
             <li className="text-[14px] font-medium tracking-[0.08rem]">
-              <a className="link" href="">
+              <a className="link" href="#about__me">
                 <span className="link-route"></span>
                 <span className="link-name">HAKKIMDA</span>
               </a>

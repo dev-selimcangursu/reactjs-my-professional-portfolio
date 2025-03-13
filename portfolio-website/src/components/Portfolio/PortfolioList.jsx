@@ -7,7 +7,8 @@ function PortfolioList() {
   return (
     <section
       id="my__portfolio"
-      className="my__portfolio w-full h-auto text-white p-18">
+      className="my__portfolio w-full h-auto text-white p-18"
+    >
       <div className="w-full my__services__title">
         <h3 className="text-center text-[40px] font-medium tracking-[3px]">
           PORTFÖYÜM
