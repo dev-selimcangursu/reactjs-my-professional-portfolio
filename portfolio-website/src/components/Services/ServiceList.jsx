@@ -7,10 +7,10 @@ function ServiceList() {
   return (
     <section
       id="my__services"
-      className="my__services w-full h-auto text-white p-18"
+      className="my__services p-3 w-full h-auto text-white md:p-18"
     >
       <div className="w-full my__services__title">
-        <h3 className="text-center text-[40px] font-medium tracking-[3px]">
+        <h3 className="text-center text-3xl md:text-[40px] font-medium tracking-[3px]">
           HİZMETLERİM
         </h3>
         <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-5 mt-10">

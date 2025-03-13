@@ -20,9 +20,9 @@ function Info() {
   return (
     <div className="w-full h-full home__full_screen__main__left">
       <p className="text-[20px] font-[600px]">Merhaba, Ben</p>
-      <h1 className="text-[60px] font-bold">{about[0].fullname}</h1>
+      <h1 className="text-5xl md:text-[60px] font-bold">{about[0].fullname}</h1>
       <h3
-        className="text-red-600 text-[28px] font-bold"
+        className="text-red-600 text-2xl md:text-[28px] font-bold"
         ref={typewriterRef}
       ></h3>
       <p className="text-[17px] text-gray-500 mt-2">

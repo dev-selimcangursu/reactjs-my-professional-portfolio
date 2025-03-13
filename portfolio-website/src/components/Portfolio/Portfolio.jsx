@@ -1,5 +1,4 @@
 import React from "react";
-
 function Portfolio(props) {
   return (
     <div
@@ -7,11 +6,7 @@ function Portfolio(props) {
     bg-[#001e35] hover:border-red-500 hover:border transition duration-300"
     >
       <div className="flex justify-center items-center">
-        <img
-          src=""
-          alt=""
-          className="w-32 h-32 md:w-65 md:h-50 object-cover rounded-lg shadow-md"
-        />
+         <img src="" alt="panel-resim" />
       </div>
       <div className="flex flex-col justify-between items-start p-4 text-white">
         <h3 className="text-lg font-semibold">{props.portfolio.title}</h3>

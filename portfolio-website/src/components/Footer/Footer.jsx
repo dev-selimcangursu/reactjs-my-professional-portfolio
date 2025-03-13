@@ -13,7 +13,7 @@ function Footer() {
           <a href={about[0].linkedin} className="text-blue-500 hover:text-blue-600"><FaLinkedin size={16} /></a>
           <a href={about[0].github} className="text-gray-400 hover:text-gray-500"><FaGithub size={16} /></a>
         </div>
-        <nav className="text-gray-300 text-sm space-x-4 mb-4 md:mb-0">
+        <nav className="text-gray-300 text-sm space-x-2 mb-4 md:mb-0">
           <a href="#home__full_screen" className="hover:text-white">Anasayfa</a>
           <a href="#about__me" className="hover:text-white">Hakkımda</a>
           <a href="#my__services" className="hover:text-white">Servisler</a>

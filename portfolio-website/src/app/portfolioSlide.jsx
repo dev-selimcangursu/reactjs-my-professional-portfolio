@@ -3,11 +3,11 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   value: [
     {
-      image: "",
+      image: "Ekran Resmi 2025-03-13 22.12.50.png",
       title: "CRM Sistemi",
       company: "Wiky Watch Akıllı Çocuk Saatleri Firması",
       subject: "CRM",
-    },
+    },    
     {
       image: "",
       title: "ERP Sistemi",
